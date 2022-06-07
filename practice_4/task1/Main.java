@@ -7,6 +7,7 @@ import javafx.geometry.Orientation;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
@@ -24,13 +25,13 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
 
         Text text = new Text("Введите коэффициенты для решения квадратного уравнения ax^2 + bx + c = 0");
-        text.setLayoutY(75);    // установка положения надписи по оси Y
-        text.setLayoutX(20);   // установка положения надписи по оси X
+        text.setLayoutY(75);
+        text.setLayoutX(20);
 
         Text a = new Text("a = ");
         Text b = new Text(", b = ");
         Text c = new Text(", c = ");
-        Text res = new Text();
+        Label res = new Label();
 
         TextField textField1 = new TextField();
         textField1.setPrefColumnCount(2);
