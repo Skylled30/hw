@@ -43,11 +43,11 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent actionEvent) {
                 String result = "Неверный ввод данных";
-                int num1;
-                int num2;
+                double num1;
+                double num2;
                 try {
-                    num1 = Integer.parseInt(n1Field.getText());
-                    num2 = Integer.parseInt(n2Field.getText());
+                    num1 = Double.parseDouble(n1Field.getText());
+                    num2 = Double.parseDouble(n2Field.getText());
                     if (signField.getText().equals("+"))
                         result = "Ответ: " + (num1 + num2);
                     else if (signField.getText().equals("-"))
@@ -60,6 +60,8 @@ public class Main extends Application {
                         result = "Неверно указан знак";
                 } catch (NumberFormatException e) {
                     result = "Неверно введены числа";
+                } catch (Exception e) {
+                    result = "Произошла ошибка";
                 }
                 label.setText(result);
             }
